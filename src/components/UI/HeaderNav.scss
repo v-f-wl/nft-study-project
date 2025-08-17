@@ -1,0 +1,14 @@
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    & a {
+      display: inline-block;
+      padding: 20px;
+    }
+  }
+}

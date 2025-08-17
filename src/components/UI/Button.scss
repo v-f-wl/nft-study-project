@@ -1,0 +1,40 @@
+.button {
+  padding: 19px 30px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  font-family: "Work Sans";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: #ffffff;
+
+  background: #a259ff;
+  border-radius: 20px;
+
+  cursor: pointer;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  .button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .button-label {
+    display: flex;
+    align-items: center;
+  }
+}
