@@ -1,0 +1,12 @@
+.footer-links-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  & a {
+    color: #858584;
+    transition: color 0.3s;
+    &:hover {
+      color: #fff;
+    }
+  }
+}

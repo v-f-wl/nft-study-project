@@ -1,69 +1,183 @@
-# React + TypeScript + Vite
+# NFT Маркетплейс
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание проекта
 
-Currently, two official plugins are available:
+Учебный проект — вёрстка сайта про NFT маркетплейс. Реализован на React + TypeScript + Vite с использованием SCSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Цель проекта
 
-## Expanding the ESLint configuration
+- Отработать грамотный подход к вёрстке
+- Продемонстрировать разбиение интерфейса на переиспользуемые компоненты
+- Закрепить навыки работы с современным фронтенд-стеком
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Технологический стек
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Основные технологии
+- **React 19.1.1** — библиотека для создания пользовательских интерфейсов
+- **TypeScript 5.8.3** — типизированный JavaScript
+- **Vite 7.1.0** — современный инструмент сборки
+- **SCSS** — препроцессор CSS для улучшенной стилизации
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Дополнительные библиотеки
+- **React Router DOM 7.8.0** — маршрутизация в React приложении
+- **React DOM 19.1.1** — рендеринг React компонентов
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Инструменты разработки
+- **ESLint** — линтер для статического анализа кода
+- **TypeScript ESLint** — правила линтера для TypeScript
+- **SWC** — быстрый компилятор JavaScript/TypeScript
+
+## Структура проекта
+
+```
+src/
+├── components/          # Переиспользуемые компоненты
+│   ├── UI/             # UI компоненты (Button, Logo, HeaderNav)
+│   ├── icons/          # SVG иконки
+│   ├── Header.tsx      # Компонент шапки сайта
+│   └── Footer.tsx      # Компонент подвала сайта
+├── layouts/            # Макеты страниц
+│   └── MainLayout.tsx  # Основной макет с Header и Footer
+├── pages/              # Страницы приложения
+│   ├── Home.tsx        # Главная страница
+│   └── Profile.tsx     # Страница профиля
+├── App.tsx             # Корневой компонент с маршрутизацией
+├── main.tsx            # Точка входа в приложение
+└── index.scss          # Глобальные стили
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Архитектура компонентов
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Компонентная структура
+Проект демонстрирует модульную архитектуру с четким разделением ответственности:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Layout компоненты** — отвечают за общую структуру страниц
+- **Page компоненты** — представляют отдельные страницы приложения
+- **UI компоненты** — переиспользуемые элементы интерфейса
+- **Icon компоненты** — SVG иконки в виде React компонентов
+
+### Примеры компонентов
+
+#### MainLayout
+Основной макет, который включает Header и Footer для всех страниц:
+```tsx
+const MainLayout = ({children}: MainLayout) => {
+  return ( 
+    <div className="">
+      <Header/>
+      {children}
+      <Footer/>
+    </div>
+  );
+}
 ```
+
+#### Button
+Переиспользуемый компонент кнопки с поддержкой иконок:
+```tsx
+interface Button{
+  label: string;
+  onClick: () => void;
+  icon?: React.ReactNode;
+}
+```
+
+#### HeaderNav
+Навигация в шапке сайта с меню и кнопкой регистрации:
+```tsx
+const HeaderNav = () => {
+  return ( 
+    <div className="header-nav">
+      <ul className="header-nav__list">
+        <li><a href="#">Marketplace</a></li>
+        <li><a href="#">Rankings</a></li>
+        <li><a href="#">Connect a wallet</a></li>
+      </ul>
+      <Button 
+        label='Sign Up' 
+        icon={<IUser/>}
+        onClick={() =>{}}
+      />
+    </div>
+   );
+}
+```
+
+## Стилизация
+
+### Дизайн-система
+- **Цветовая схема**: Темная тема с основным фоном `#2b2b2b`
+- **Типографика**: Использование шрифтов Space Mono и Work Sans
+- **Максимальная ширина контейнера**: 1050px
+
+### SCSS структура
+- Глобальные стили в `src/index.scss`
+- Компонентные стили в отдельных `.scss` файлах
+- Использование БЭМ методологии для именования классов
+
+## Маршрутизация
+
+Приложение использует React Router для навигации:
+- `/` — Главная страница
+- `/profile` — Страница профиля
+
+## Установка и запуск
+
+### Предварительные требования
+- Node.js (версия 18 или выше)
+- npm или yarn
+
+### Установка зависимостей
+```bash
+npm install
+```
+
+### Запуск в режиме разработки
+```bash
+npm run dev
+```
+
+### Сборка для продакшена
+```bash
+npm run build
+```
+
+### Предварительный просмотр сборки
+```bash
+npm run preview
+```
+
+### Проверка кода линтером
+```bash
+npm run lint
+```
+
+## Особенности реализации
+
+### TypeScript
+- Строгая типизация для всех компонентов
+- Интерфейсы для пропсов компонентов
+- Типизация для ReactNode и других React типов
+
+### Современные практики
+- Функциональные компоненты с хуками
+- Использование TypeScript для типизации
+- Модульная архитектура компонентов
+- SCSS для улучшенной стилизации
+
+### Производительность
+- Vite для быстрой сборки и горячей перезагрузки
+- SWC для быстрой компиляции TypeScript
+- Оптимизированная структура компонентов
+
+## Планы развития
+
+- Добавление новых страниц (коллекции, детали NFT)
+- Реализация адаптивного дизайна
+- Интеграция с Web3 кошельками
+- Добавление анимаций и переходов
+- Реализация поиска и фильтрации
+
+## Лицензия
+
+Этот проект создан в учебных целях.

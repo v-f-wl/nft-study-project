@@ -1,0 +1,33 @@
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  &__nav {
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #cccccc;
+    & a {
+      display: inline-block;
+    }
+    & h2 {
+      font-family: "Space Mono";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 160%;
+      text-transform: capitalize;
+      color: #ffffff;
+    }
+  }
+}
+
+.footer-top-space {
+  margin-top: 5px;
+}
