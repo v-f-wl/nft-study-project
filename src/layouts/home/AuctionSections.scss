@@ -1,0 +1,84 @@
+.auction {
+  position: relative;
+  background: url("/auction/bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
+  }
+}
+
+.auction-body {
+  position: relative;
+  padding: 360px 0 60px;
+
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  z-index: 10;
+  &__title {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__timer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    gap: 10px;
+    background: rgba(59, 59, 59, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+  }
+}
+
+.auction-title {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 110%;
+  color: #ffffff;
+}
+
+.auction-timer {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__time {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 120%;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+  &__label {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 110%;
+    color: #ffffff;
+  }
+  &__sep {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 140%;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+}

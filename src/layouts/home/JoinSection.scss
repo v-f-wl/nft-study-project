@@ -1,0 +1,16 @@
+.join-body {
+  padding: 60px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  border-radius: 20px;
+  background: #3b3b3b;
+  &__banner {
+    max-width: 425px;
+    width: 100%;
+    & img {
+      width: 100%;
+    }
+  }
+}

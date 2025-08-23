@@ -1,0 +1,28 @@
+.avatar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  &__img {
+    max-width: 24px;
+    max-height: 24px;
+  }
+  &__label {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.bg-grey {
+  max-width: max-content;
+  padding: 10px 20px;
+  display: inline-flex;
+  background: #3b3b3b;
+  border-radius: 50px;
+}

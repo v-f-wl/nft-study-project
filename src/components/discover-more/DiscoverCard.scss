@@ -1,0 +1,39 @@
+.discover-card {
+  background-color: #3b3b3b;
+  border-radius: 20px;
+  overflow: hidden;
+  &__info {
+    padding: 20px 30px;
+  }
+  &__details {
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &--last {
+      text-align: end;
+    }
+  }
+  &__label {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 110%;
+    color: #858584;
+  }
+  &__cout {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+  }
+}

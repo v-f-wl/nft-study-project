@@ -1,0 +1,31 @@
+.categories-grid {
+  margin-top: 60px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.category-item {
+  position: relative;
+  background: #3b3b3b;
+  border-radius: 20px;
+  overflow: hidden;
+  &__bg {
+    position: relative;
+  }
+  &__blur {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(7.5px);
+  }
+  &__icon {
+    position: absolute;
+    left: 70px;
+    right: 70px;
+    top: 70px;
+  }
+  &__title {
+    padding: 20px 30px;
+  }
+}

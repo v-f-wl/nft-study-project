@@ -1,0 +1,37 @@
+.trending-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  transition: 0.7s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+  & img {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  &__set {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  &__count {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 160%;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 20px;
+    background-color: #a259ff;
+  }
+}
