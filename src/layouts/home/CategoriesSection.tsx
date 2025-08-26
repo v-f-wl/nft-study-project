@@ -24,10 +24,12 @@ const CategoryItem = ({
       <div className="category-item__bg">
         <div className="category-item__blur"></div>
         <img src={categoryImage} alt={`category is ${categoryLabel}`} />
+        <div className="category-item__icon">
+          {categoryIcon}
+        </div>
+
       </div>
-      <div className="category-item__icon">
-        {categoryIcon}
-      </div>
+
       <div className="category-item__title">
         <Heading level={5} label={categoryLabel}/>
       </div>

@@ -52,3 +52,9 @@
   text-transform: capitalize;
   color: #ffffff;
 }
+
+@media (max-width: 714px) {
+  .text-center {
+    text-align: start;
+  }
+}

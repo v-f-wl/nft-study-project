@@ -4,3 +4,22 @@
   justify-content: space-between;
   gap: 30px;
 }
+
+.mobile-banner {
+  display: none;
+}
+.desktop-banner {
+  display: block;
+}
+@media (max-width: 714px) {
+  .welcome-section {
+    display: block;
+  }
+  .mobile-banner {
+    margin-top: 40px;
+    display: block;
+  }
+  .desktop-banner {
+    display: none;
+  }
+}

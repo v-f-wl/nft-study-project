@@ -24,10 +24,10 @@ const TrendingItem = ({
         <img src={firstImageUrl} alt={`${userName}s pics`} />
       </div>
       <div className="trending-grid__set">
-        <div className="">
+        <div className="trending-grid__set--img">
           <img src={secondImageUrl} alt={`${userName}s pics`} />
         </div>
-        <div className="">
+        <div className="trending-grid__set--img">
           <img src={thirdImageUrl} alt={`${userName}s pics`} />
         </div>
         <div className="trending-grid__count">1025+</div>

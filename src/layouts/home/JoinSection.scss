@@ -32,3 +32,13 @@
     }
   }
 }
+
+@media (max-width: 714px) {
+  .join-body {
+    flex-direction: column;
+    &__banner {
+      max-width: 100%;
+      aspect-ratio: 1/1;
+    }
+  }
+}

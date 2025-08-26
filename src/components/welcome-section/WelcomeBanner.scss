@@ -19,3 +19,9 @@
     max-width: 330px;
   }
 }
+
+@media (max-width: 714px) {
+  .welcome-banner {
+    max-width: 100%;
+  }
+}

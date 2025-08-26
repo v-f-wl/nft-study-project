@@ -39,3 +39,11 @@
     gap: 30px;
   }
 }
+
+@media (max-width: 714px) {
+  .footer-top {
+    &__nav {
+      max-width: 100%;
+    }
+  }
+}

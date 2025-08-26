@@ -21,9 +21,9 @@
   }
   &__icon {
     position: absolute;
-    left: 70px;
-    right: 70px;
-    top: 70px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   &__title {
     padding: 20px 30px;
@@ -33,11 +33,24 @@
 @media (max-width: 940px) {
   .category-item {
     &__icon {
-      left: 31px;
-      top: 35px;
       svg {
         width: 80px;
         height: 80px;
+      }
+    }
+  }
+}
+@media (max-width: 714px) {
+  .categories-grid {
+    margin-top: 40;
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .category-item {
+    &__bg {
+      & img {
+        width: 100%;
       }
     }
   }

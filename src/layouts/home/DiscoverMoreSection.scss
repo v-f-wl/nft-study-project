@@ -24,4 +24,15 @@
   }
 }
 
+@media (max-width: 714px) {
+  .discover-more {
+    &__list {
+      margin-top: 40px;
+      grid-template-columns: 1fr;
+      > :nth-child(3) {
+        display: block;
+      }
+    }
+  }
+}
 // > :nth-child(3) {

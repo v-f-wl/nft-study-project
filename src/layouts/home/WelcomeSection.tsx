@@ -17,6 +17,9 @@ const WelcomeSection = () => {
           className='welcome-text'
           label='NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.'
         /> 
+        <div className="mobile-banner">
+          <WelcomeBanner/>
+        </div>
         <Button 
           label='Get Started'
           onClick={() => {}}
@@ -24,7 +27,9 @@ const WelcomeSection = () => {
         />
         <StatsSection/>
       </div>
-      <WelcomeBanner/>
+      <div className="desktop-banner">
+        <WelcomeBanner/>
+      </div>
     </div>
   );
 }

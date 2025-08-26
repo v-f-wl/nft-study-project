@@ -65,7 +65,9 @@ const TopCreatersSection = () => {
           <Text className="mt-10" label="Checkout Top Rated Creators on the NFT Marketplace"/>
         </div>
 
-        <Button className='button-primary' onClick={() => {}} icon={<IRocket/>} label="View Rankings" />
+        <div className="desktop-button">
+          <Button className='button-primary' onClick={() => {}} icon={<IRocket/>} label="View Rankings" />
+        </div>
       </div>
 
       <div className="top-creaters__list">
@@ -79,6 +81,9 @@ const TopCreatersSection = () => {
           />
         ))}
       </div>
+      <div className="mobile-button">
+          <Button className='button-primary full' onClick={() => {}} icon={<IRocket/>} label="View Rankings" />
+        </div>
     </div>
   );
 }

@@ -41,3 +41,25 @@
     }
   }
 }
+
+@media (max-width: 714px) {
+  .info-list {
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+  }
+  .info-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0 20px;
+
+    &__img {
+      max-width: 100px;
+      grid-row: 1/-1;
+    }
+    &__text {
+      margin-top: 0px;
+      text-align: start;
+    }
+  }
+}

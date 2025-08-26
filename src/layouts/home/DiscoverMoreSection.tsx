@@ -13,8 +13,9 @@ const DiscoverMoreSection = () => {
           <Heading level={3} label="Discover More NFTs"/>
           <Text className="mt-10" label="Explore new trending NFTs"/>
         </div>
-
-        <Button className='button-primary' onClick={() => {}} icon={<IRocket/>} label="See All" />
+        <div className="desktop-button">
+          <Button className='button-primary' onClick={() => {}} icon={<IRocket/>} label="See All" />
+        </div>
       </div>
 
       <div className="discover-more__list">
@@ -30,6 +31,9 @@ const DiscoverMoreSection = () => {
           />
         ))}
       </div>
+      <div className="mobile-button">
+          <Button className='button-primary full' onClick={() => {}} icon={<IRocket/>} label="See All" />
+        </div>
     </div>
    );
 }
