@@ -1,7 +1,11 @@
+.nav-body {
+  position: relative;
+}
 .header-nav {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  position: absolute;
+  display: none;
+  &__burger {
+  }
   &__list {
     display: flex;
     align-items: center;
@@ -9,6 +13,18 @@
     & a {
       display: inline-block;
       padding: 20px;
+    }
+  }
+}
+
+@media (min-width: 940px) {
+  .header-nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &__burger {
+      display: none;
     }
   }
 }

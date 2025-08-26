@@ -7,6 +7,7 @@ const EmailInput = () => {
       <Button
         onClick={() => {}}
         label='Subscribe'
+        className='full ps'
       />
     </div>
    );

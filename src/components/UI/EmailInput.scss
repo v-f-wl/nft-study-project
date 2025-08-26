@@ -16,3 +16,16 @@
     }
   }
 }
+
+@media (max-width: 940px) {
+  .email-input {
+    padding-left: 0px;
+    background: transparent;
+    flex-direction: column;
+    &__body {
+      background: #fff;
+      padding: 12px 20px;
+      border-radius: 20px;
+    }
+  }
+}

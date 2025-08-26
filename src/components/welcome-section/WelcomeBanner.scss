@@ -14,3 +14,8 @@
     gap: 10px;
   }
 }
+@media (max-width: 940px) {
+  .welcome-banner {
+    max-width: 330px;
+  }
+}

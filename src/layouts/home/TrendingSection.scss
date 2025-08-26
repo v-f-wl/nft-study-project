@@ -6,3 +6,15 @@
     gap: 30px;
   }
 }
+
+@media (max-width: 940px) {
+  .trending-section {
+    &__gallery {
+      margin-top: 40px;
+      grid-template-columns: 1fr 1fr;
+      > :nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,9 +1,21 @@
+@function fluid-font($min, $max, $min-vw: 320, $max-vw: 1280) {
+  $slope: ($max - $min) / ($max-vw - $min-vw);
+  $intercept: $min - $slope * $min-vw;
+  @return clamp(#{$min}px, #{$intercept}px + #{$slope * 100}vw, #{$max}px);
+}
+
+@function fluid-line($min, $max, $min-vw: 320, $max-vw: 1280) {
+  $slope: ($max - $min) / ($max-vw - $min-vw);
+  $intercept: $min - $slope * $min-vw;
+  @return clamp(#{$min}, #{$intercept} + #{$slope * 100}vw, #{$max});
+}
+
 .text {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 160%;
+  font-size: fluid-font(12, 24, 320, 1920);
+  line-height: fluid-line(1.4, 1.6);
   text-transform: capitalize;
   color: #ffffff;
 }

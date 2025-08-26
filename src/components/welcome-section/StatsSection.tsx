@@ -1,3 +1,5 @@
+import Heading from '../UI/Heading';
+import Text from '../UI/Text';
 import './StatsSection.scss'
 
 type StatItem = {
@@ -7,8 +9,8 @@ type StatItem = {
 const StatItem = ({label, count}: StatItem) => {
   return (
     <div className="stat-item">
-      <div className="stat-item__count">{count}</div>
-      <div className="stat-item__label">{label}</div>
+      <Heading level={5} label={count}/>
+      <Text label={label}/>
     </div>
   )
 }

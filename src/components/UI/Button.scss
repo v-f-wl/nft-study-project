@@ -1,6 +1,7 @@
 .button {
   padding: 19px 30px;
 
+  width: max-content;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -52,4 +53,12 @@
   max-width: max-content;
   background: #fff;
   color: #2b2b2b;
+}
+
+.full {
+  width: 100%;
+}
+
+.ps {
+  padding: 12px 0;
 }

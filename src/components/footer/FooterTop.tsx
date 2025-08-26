@@ -1,4 +1,5 @@
 import ILogo from '../icons/ILogo';
+import EmailInput from '../UI/EmailInput';
 import FooterLinksList from './FooterLinksList';
 import './FooterTop.scss'
 const FooterTop = () => {
@@ -39,7 +40,9 @@ const FooterTop = () => {
         <li className='footer-top-space'>
           <p>Get exclusive promotions & updates straight to your inbox.</p>
         </li>
-        <li>btn</li>
+        <li>
+          <EmailInput/>
+        </li>
       </ul>
     </div>
   );

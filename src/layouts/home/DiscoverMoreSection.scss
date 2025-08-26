@@ -5,8 +5,23 @@
     align-items: center;
   }
   &__list {
+    margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
 }
+
+@media (max-width: 940px) {
+  .discover-more {
+    &__list {
+      margin-top: 40px;
+      grid-template-columns: repeat(2, 1fr);
+      > :nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+
+// > :nth-child(3) {

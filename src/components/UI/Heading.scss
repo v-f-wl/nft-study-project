@@ -1,3 +1,9 @@
+@function fluid-font($min, $max, $min-vw: 320, $max-vw: 1300) {
+  $slope: ($max - $min) / ($max-vw - $min-vw);
+  $intercept: $min - $slope * $min-vw;
+  @return clamp(#{$min}px, #{$intercept}px + #{$slope * 100}vw, #{$max}px);
+}
+
 .max-w-510 {
   max-width: 510px;
 }
@@ -11,7 +17,7 @@
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 67px;
+  font-size: fluid-font(22, 67);
   line-height: 110%;
   text-transform: capitalize;
   color: #ffffff;
@@ -31,7 +37,7 @@
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 38px;
+  font-size: fluid-font(28, 38, 320, 1920);
   line-height: 120%;
   text-transform: capitalize;
   color: #ffffff;
@@ -41,7 +47,7 @@
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 22px;
+  font-size: fluid-font(16, 22, 320, 1720);
   line-height: 140%;
   text-transform: capitalize;
   color: #ffffff;

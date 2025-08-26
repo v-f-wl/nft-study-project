@@ -11,3 +11,13 @@
     gap: 20px;
   }
 }
+
+@media (max-width: 940px) {
+  .top-creaters {
+    &__list {
+      margin-top: 40px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+}

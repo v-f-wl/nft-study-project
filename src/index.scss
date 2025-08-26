@@ -66,7 +66,14 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 80px 0;
-  max-width: 1050px;
+  padding: 80px 10px;
+  max-width: 1070px;
   width: 100%;
+}
+
+@media (max-width: 940px) {
+  .container {
+    max-width: 710px;
+    padding: 40px 20px;
+  }
 }
